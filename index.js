@@ -8,7 +8,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const path = "COLOQUE O CAMINHO"
+const path = "./arquivo/PedidosRFID.txt"
 
 app.get('/lerCsv', (req,res) => {
   fs.readFile(path, {encoding: 'utf-8'}, function(err,data){
@@ -34,4 +34,4 @@ app.get('/lerCsv', (req,res) => {
 })
 
 
-app.listen(8080)
+app.listen(8000)
